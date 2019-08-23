@@ -11,7 +11,7 @@ node {
 	}
   if (env.BRANCH_NAME == 'feature'){
 	     stage('build'){
-		    echo "This  is feature branch in feature"
+		    echo "This  is feature branch in feature second change"
 			}
 	}
 }
