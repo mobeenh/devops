@@ -1,18 +1,13 @@
 node {
-     if (env.BRANCH_NAME == 'master'){
-	     stage('build'){
-		    echo "This  is master branch in master jenksin"
-			}
-	}
-	    if (env.BRANCH_NAME == 'develop'){
-	     stage('build'){
-		    echo "This  is develop in master jenksin"
-			}
-	}
-	if (env.BRANCH_NAME == 'feature'){
-	     stage('build'){
-		    echo "This  is feature in master jenksin"
-			}
+	stage ('build'){
+		if(env.TAG_NAME != null){
+			println("we are building tag ${env.TAG_NAME}")
+		}
+		else {
+			println("we are building branch")
+		}
+		if(env.TAG_NAME == "release-2.0"){
+			println("we are building release-2.0")
+		}
 	}
 }
-
