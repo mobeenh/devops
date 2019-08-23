@@ -1,7 +1,7 @@
 node {
      if (env.BRANCH_NAME == 'master'){
 	     stage('build'){
-		    echo "This  is master"
+		    echo "This  is master branch"
 			}
 	}
 	    if (env.BRANCH_NAME == 'develop'){
